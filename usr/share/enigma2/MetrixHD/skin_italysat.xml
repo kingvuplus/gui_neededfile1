@@ -1,0 +1,1804 @@
+<skin>
+  <!-- ############################################ Skin Goooooooooooooooooooooooooooooooo ############################################ -->
+  <!-- Blue Panel Principale Con infoCAM -->
+  <screen name="ItalysatBlue" title="ItalySat BluePanel" flags="wfNoBorder" position="center,center" size="1280,720" backgroundColor="transparent">
+  	  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  	  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  	  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="464,225" size="720,2" />
+  	  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" name="Title" transparent="1" valign="top" zPosition="-20" />
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  	  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  	  <!-- /*ClockWidget-->
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+  	    <convert type="ClockToText">Default</convert>
+  	  </widget>
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+  	    <convert type="ClockToText">Format:%e. %b</convert>
+  	  </widget>
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+  	    <convert type="ClockToText">Format:%A</convert>
+  	  </widget>
+  	  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  	  <!--ClockWidget */-->
+  	  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  	  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+  	  <!-- Cams Selection, News, Timeline, Parental Control, About, Icona Cam -->
+  	  <widget name="config" position="460,133" size="723,102" zPosition="2" transparent="1" />
+  	  <widget name="conn" render="Label" zPosition="3" position="56,430" size="330,230" font="Regular;20" valign="top" halign="center" foregroundColor="red" transparent="1" backgroundColor="metrixBackground" />
+  	  <widget source="conninfo" render="Label" zPosition="3" position="460,578" size="759,49" font="Regular;20" halign="center" valign="center" foregroundColor="metrixGreen" transparent="1" backgroundColor="metrixBackground" />
+  	  <widget name="lab1" position="838,235" size="385,28" font="Regular;22" zPosition="2" backgroundColor="metrixBackground" foregroundColor="metrixForeground" transparent="1" />
+  	  <widget name="lab2" position="460,235" size="405,28" font="Regular;22" zPosition="2" backgroundColor="metrixBackground" foregroundColor="metrixForeground" transparent="1" />
+  	  <widget name="lab3" position="460,265" size="405,28" font="Regular;22" zPosition="2" backgroundColor="metrixBackground" foregroundColor="metrixForeground" transparent="1" />
+  	  <widget name="lab4" position="838,265" size="385,28" font="Regular;22" zPosition="2" backgroundColor="metrixBackground" foregroundColor="metrixForeground" transparent="1" />
+  	  <widget name="info_ecm" position="460,302" size="700,320" font="Regular; 20" zPosition="2" backgroundColor="metrixBackground" foregroundColor="yellow" transparent="1" />
+	  <!-- Picon -->
+      <widget alphatest="blend" position="460,302" render="Picon" size="220,132" source="session.CurrentService" transparent="1" zPosition="4">
+        <convert type="ServiceName">Reference</convert>
+      </widget>
+  </screen>
+  <!-- Blue Panel > Blue > Setting Menu -->
+  <screen name="ItalysatSettings" title="ItalySat Settings" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+    <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italysat.png" position="227,139" size="330,204" />
+    <!-- /*ClockWidget-->
+    <eLabel backgroundColor="metrixBackground" position="208,91" size="366,300" transparent="0" zPosition="-1" />
+    <!-- /*ClockWidget-->
+    <widget backgroundColor="metrixBackground" font="Regular; 60" halign="left" position="415,401" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="265,444" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %b</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="287,415" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <eLabel backgroundColor="metrixBackground" position="208,410" size="368,70" transparent="0" zPosition="-1" />
+    <!--ClockWidget */-->
+    <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="606,92" size="525,547" zPosition="-11" />
+    <!-- ItalySat -->
+    <widget enableWrapAround="1" position="596,107" render="Listbox" scrollbarMode="showNever" size="547,513" source="list" transparent="1">
+      <convert type="TemplatedMultiContent">
+  					{"template": [
+  								MultiContentEntryText(pos = (66, 5), size = (480, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+  								MultiContentEntryPixmapAlphaBlend(pos = (25, 5), size = (36, 36), png = 1) # index 1 is the status pixmap
+  						],
+  					"fonts": [gFont("Regular", 24),gFont("Regular", 16)],
+  					"itemHeight": 45
+  					}
+  				</convert>
+    </widget>
+  </screen>
+  <!-- Blue Panel > Green > Backup Menu -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ItalyMenu" title="Italy Backup" position="0,0" size="1401,721">
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italysat.png" position="227,139" size="330,204" />
+  <!-- /*ClockWidget-->
+  <eLabel backgroundColor="metrixBackground" position="208,91" size="366,300" transparent="0" zPosition="-1" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="Regular; 60" halign="left" position="415,401" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="265,444" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="287,415" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="208,410" size="368,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+  <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="606,92" size="525,547" zPosition="-11" />
+  <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="0,0" size="1281,50" zPosition="-11" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="217,0" size="30,40" />
+  <widget backgroundColor="metrixBackground" font="Regular; 22" halign="left" position="258,10" render="Label" size="160,30" source="key_red" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget enableWrapAround="1" position="596,107" render="Listbox" scrollbarMode="showNever" size="547,513" source="menu" transparent="1">
+    <convert type="TemplatedMultiContent">
+  					{"template": [ MultiContentEntryText(pos = (30, 5), size = (420, 50), flags = RT_HALIGN_LEFT, text = 1) ],
+  					"fonts": [gFont("SetrixHD", 30)],
+  					"itemHeight": 60
+  					}
+  				</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="606,92" size="525,547" zPosition="-11" />
+  <widget foregroundColor="metrixAccent1" position="655,481" render="Listbox" scrollbarMode="showNever" selectionDisabled="1" size="392,125" source="menu" transparent="1">
+    <convert type="TemplatedMultiContent">
+  	    {"template": [
+  	    MultiContentEntryText(pos = (0,0),size = (390,125),flags = RT_HALIGN_CENTER|RT_VALIGN_BOTTOM|RT_WRAP,text = 2),# index 0 is the MenuText,
+  	                 ],
+  	        "fonts": [gFont("SetrixHD",20)],
+  	        "itemHeight": 125
+  	    }
+  	  </convert>
+  </widget>
+</screen>
+  <!-- ## BackUpManager ## -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ItalyBackupManager" position="0,0" size="1280,720" title="Backup Manager">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_menu.png" position="1146,52" size="81,40" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_epg.png" position="1035,52" size="81,40" />
+  <widget font="SetrixHD; 22" foregroundColor="metrixAccent1" halign="left" name="lab1" position="470,135" size="750,70" transparent="1" valign="top" zPosition="2" />
+  <widget foregroundColor="foreground" name="list" position="470,220" scrollbarMode="showOnDemand" size="750,410" transparent="1" zPosition="2" />
+  <widget font="SetrixHD; 20" foregroundColor="metrixAccent1" name="backupstatus" position="62,540" size="320,120" transparent="1" valign="bottom" zPosition="5" />
+  <applet type="onLayoutFinish">
+          self["list"].instance.setItemHeight(25)
+        </applet>
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ItalyBackupManagerMenu" title="ItalySat Backup Manager" position="0,0" size="1280,720">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget enableWrapAround="1" font="Regular;22" foregroundColor="foreground" itemHeight="30" name="config" position="470,135" scrollbarMode="showOnDemand" size="750,560" transparent="1" valign="top" />
+  <!--  <widget name="HelpWindow" pixmap="MetrixHD/buttons/key_help.png" position="852,424" zPosition="1" size="1,1" transparent="1" alphatest="on" /> -->
+  <widget name="footnote" position="590,500" size="600,20" zPosition="1" font="Regular;20" halign="left" transparent="1" valign="top" />
+  <widget name="description" position="590,530" size="600,77" font="Regular;18" halign="center" valign="top" transparent="0" zPosition="1" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ItalyBackupManagerLogView" position="0,0" size="1280,720" title="Backup Manager Log">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <widget name="waitingtext" position="0,0" size="0,0" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <widget font="Regular;22" foregroundColor="grey" itemHeight="28" name="list" position="470,135" size="755,532" transparent="1" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="BackupSelection" position="0,0" size="1280,720" title="Select files/folders to backup">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;20" halign="left" position="645,640" render="Label" size="160,24" source="key_green" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;20" halign="left" position="840,640" render="Label" size="160,24" source="key_yellow" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" position="450,640" render="Label" size="160,24" source="key_red" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget enableWrapAround="1" font="Regular;22" itemHeight="28" name="checkList" position="470,135" scrollbarMode="showOnDemand" size="755,500" transparent="1" zPosition="3" />
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="XtraPluginsSelection" position="0,0" size="1280,720" title="Select extra packages folder">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget enableWrapAround="1" font="Regular;22" itemHeight="28" name="checkList" position="470,135" scrollbarMode="showOnDemand" size="755,500" transparent="1" zPosition="3" />
+</screen>
+  <!-- ## ImageManager ## -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ItalyImageManager" position="0,0" size="1280,720" title="Image Manager">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_menu.png" position="1146,51" size="81,40" />
+  <widget font="Regular;22" foregroundColor="metrixAccent2" halign="left" itemHeight="28" name="lab1" position="470,135" size="750,50" transparent="1" valign="top" zPosition="2" />
+  <widget enableWrapAround="1" foregroundColor="foreground" itemHeight="28" name="list" position="470,190" scrollbarMode="showOnDemand" size="750,440" transparent="1" />
+  <widget font="Regular; 20" foregroundColor="metrixAccent1" name="backupstatus" position="62,540" size="320,120" transparent="1" valign="bottom" zPosition="5" />
+  <applet type="onLayoutFinish">
+          self["list"].instance.setItemHeight(28)
+        </applet>
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ImageManagerDownload" position="0,0" size="1280,720" title="Image Manager">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget font="Regular;22" foregroundColor="metrixAccent2" halign="left" itemHeight="28" name="lab1" position="470,135" size="750,50" transparent="1" valign="top" zPosition="2" />
+  <widget enableWrapAround="1" foregroundColor="foreground" itemHeight="28" name="list" position="470,190" scrollbarMode="showOnDemand" size="750,440" transparent="1" />
+  <applet type="onLayoutFinish">
+          self["list"].instance.setItemHeight(28)
+        </applet>
+</screen>
+  <!-- Blue Panel > Yellow > Timeline Menu -->
+  <screen name="italysatShowPanel" title="Restore Menu" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+    <eLabel backgroundColor="metrixBackground" position="40,25" size="1205,650" zPosition="-10" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 50" halign="left" position="1103,28" render="Label" size="140,60" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 15" foregroundColor="metrixAccent1" halign="right" position="931,37" render="Label" size="161,27" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 16" foregroundColor="metrixAccent1" halign="right" position="931,64" render="Label" size="161,29" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %b</convert>
+    </widget>
+    <eLabel backgroundColor="metrixBackground" font="SetrixHD;35" position="70,47" size="800,43" text="Select Network Adapter" transparent="1" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position=" 70,635" size="30,40" />
+  <eLabel font="SetrixHD;22" foregroundColor="metrixForeground" backgroundColor="metrixBackground" halign="left" position="105,637" render="Label" size="240,24" text="Close" transparent="1" zPosition="1" />
+    <!-- ItalySat -->
+    <widget source="list" render="Listbox" position="85,100" size="1100,500" scrollbarMode="showOnDemand" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;21" valign="center" halign="left">
+      <convert type="StringList" />
+    </widget>
+  </screen>
+
+  <!-- Blue Panel > Red > Libera memoria Ram Line1  -->
+  <!-- ##RamPanel ## -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ItalyRamPanel" position="0,0" size="1280,720">
+    <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+    <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+    <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+    <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+    <!-- /*ClockWidget-->
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %b</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+    <!--ClockWidget */-->
+    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+    <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="416,636" size="30,35" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="635,637" size="30,35" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="850,637" size="30,35" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD;20" halign="left" position="670,640" render="Label" size="180,24" source="key_green" transparent="1" zPosition="1" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD;20" halign="left" position="885,640" render="Label" size="180,24" source="key_yellow" transparent="1" zPosition="1" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" position="450,640" render="Label" size="180,24" source="key_red" transparent="1" zPosition="1" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+    <widget name="config" position="462,146" size="717,160" zPosition="1" transparent="1" scrollbarMode="showOnDemand" />
+    <widget name="memory" position="462,336" zPosition="2" size="717,24" valign="center" halign="left" font="Regular;22" transparent="0" foregroundColor="green" />
+    <widget name="slide" position="462,361" zPosition="2" borderWidth="1" size="717,8" backgroundColor="dark" />
+  </screen>
+  <!-- Blue Panel > Red > Gestore Periferiche Line1  -->
+  <!-- ## DevicesManager ## -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ItalyDevicesPanel" position="0,0" size="1280,720" title="Mount Manager">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <widget name="waitingtext" position="0,0" size="0,0" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+  <widget font="Regular;22" foregroundColor="metrixAccent1" halign="left" itemHeight="28" name="lab1" position="470,135" size="750,60" transparent="1" valign="top" zPosition="2" />
+  <widget enableWrapAround="0" foregroundColor="foreground" position="470,135" render="Listbox" scrollbarMode="showOnDemand" size="750,494" source="list" transparent="1" zPosition="5">
+    <convert type="TemplatedMultiContent">
+    				{"template": [
+    				MultiContentEntryText(pos = (90, 0), size = (660, 30), font=0, text = 0),
+    				MultiContentEntryText(pos = (110, 30), size = (640, 50), font=1, flags = RT_VALIGN_TOP, text = 1),
+    				MultiContentEntryPixmapAlphaBlend(pos = (0, 0), size = (80, 80), png = 2),
+    				],
+    				"fonts": [gFont("Regular", 22),gFont("Regular", 18)],
+    				"itemHeight": 85
+    				}
+    			</convert>
+  </widget>
+</screen>
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ItalyDevicesConf" position="0,0" size="1280,720" title="Choose where to mount your devices to:">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <widget name="waitingtext" position="0,0" size="0,0" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" position="450,640" render="Label" size="160,24" source="key_red" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;20" halign="left" position="645,640" render="Label" size="160,24" source="key_green" transparent="1" zPosition="1" />
+  <widget font="Regular;18" foregroundColor="metrixAccent1" halign="center" name="Linconn" position="470,590" size="750,40" valign="center" />
+  <widget enableWrapAround="1" font="Regular;20" foregroundColor="foreground" halign="center" itemHeight="28" name="config" position="470,135" scrollbarMode="showOnDemand" size="750,450" transparent="1" />
+</screen>
+  <!-- Blue Panel > Red > Gestore Kernel Line4  -->
+  <screen name="ItalyKernelModule" title="Kernel Download Manager" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget source="list" render="Listbox" position="470,135" size="750,494" scrollbarMode="showOnDemand" transparent="1">
+    <convert type="TemplatedMultiContent">
+  			{"template": [
+  			MultiContentEntryText(pos = (50, 5), size = (720, 30), font=0, flags = RT_HALIGN_LEFT | RT_HALIGN_LEFT, text = 1),
+  			MultiContentEntryPixmapAlphaBlend(pos=(5, 5), size=(34, 34), png=3),
+  			],
+  			"fonts": [gFont("Regular", 20)],
+  			"itemHeight": 40
+  			}
+        </convert>
+  </widget>
+</screen>
+  <!-- Blue Panel > Red > Gestore Swap Line3  -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ItalySwapPanel" position="0,0" size="1280,720" title="Swap File Manager">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget alphatest="on" name="autostart_off" pixmap="MetrixHD/skin_default/icons/lock_off.png" position="470,193" size="25,25" transparent="1" zPosition="1" />
+  <widget alphatest="on" name="autostart_on" pixmap="MetrixHD/skin_default/icons/lock_on.png" position="470,193" size="25,25" transparent="1" zPosition="2" />
+  <widget font="SetrixHD; 22" foregroundColor="metrixAccent1" name="lab1" position="500,180" size="480,45" transparent="1" valign="center" />
+  <widget font="Regular;20" name="lab2" position="470,233" size="150,30" transparent="0" valign="center" />
+  <widget backgroundColor="un5678a4" font="Regular;20" name="labplace" position="620,233" size="220,30" valign="center" />
+  <widget font="Regular;20" name="lab3" position="470,263" size="150,30" transparent="0" valign="center" />
+  <widget backgroundColor="metrixBackground" font="Regular;20" name="labsize" position="620,263" size="220,30" valign="center" />
+  <widget font="Regular;20" name="lab4" position="470,293" size="150,30" transparent="0" valign="center" />
+  <widget backgroundColor="red" font="Regular;20" halign="center" name="inactive" position="620,293" size="100,30" valign="center" />
+  <widget backgroundColor="green" font="Regular;20" halign="center" name="active" position="620,293" size="100,30" valign="center" zPosition="1" />
+</screen>
+  <!-- Blue Panel > Red > Gestore Cronologia Line5  -->
+  <screen name="ItalyCronManager" title="ItalySat Cron Manager" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget source="list" render="Listbox" position="470,135" size="750,420" scrollbarMode="showOnDemand" transparent="1">
+    <convert type="StringList" />
+  </widget>
+  <widget name="lab1" position="460,580" zPosition="3" size="140,28" font="Regular;20" valign="center" transparent="0" />
+  <widget name="labdisabled" position="608,580" zPosition="3" size="167,28" font="Regular;20" valign="center" halign="center" backgroundColor="red" />
+  <widget name="labactive" position="608,580" zPosition="3" size="167,28" font="Regular;20" valign="center" halign="center" backgroundColor="green" />
+  <widget name="lab2" position="833,580" zPosition="3" size="140,28" font="Regular;20" valign="center" transparent="0" />
+  <widget name="labstop" position="985,580" zPosition="3" size="167,28" font="Regular;20" valign="center" halign="center" backgroundColor="red" />
+  <widget name="labrun" position="985,580" zPosition="3" size="167,28" font="Regular;20" valign="center" halign="center" backgroundColor="green" />
+</screen>
+  <screen name="ItalySetupCronConf" title="ItalySat Cron Setup" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget name="config" position="470,135" size="750,494" scrollbarMode="showOnDemand" transparent="1" />
+</screen>
+  <!-- Blue Panel > Red > Gestore Fast Plugin Line6  -->
+  <screen name="ItalyFastPlugin" title="ItalySat Fast Plugin Setup" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget enableWrapAround="1" position="470,135" render="Listbox" scrollbarMode="showNever" size="750,494" source="list" transparent="1">
+    <convert type="TemplatedMultiContent">
+    						{"template": [
+    								MultiContentEntryText(pos = (135, 2), size = (570, 33), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 1 is the description
+    								MultiContentEntryText(pos = (135, 28), size = (570, 26), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the description
+    								MultiContentEntryPixmapAlphaBlend(pos = (20, 5), size = (100, 50), png = 2), # index 4 is the status pixmap
+    						],
+    					"fonts": [gFont("Regular", 24),gFont("Regular", 16)],
+    					"itemHeight": 60
+    					}
+    				</convert>
+  </widget>
+</screen>
+  <!-- Blue Panel > Red > Gestore Pcsc Line7  -->
+  <screen name="ItalyPcsc" title="ItalySat Pcsc Panel" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget name="lab1" position="470,135" size="750,494" font="Regular;24" valign="top" foregroundColor="metrixForeground" backgroundColor="transpBlack" transparent="1" />
+  <widget name="lab2" position="590,570" size="317,30" zPosition="3" font="Regular;24" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget name="labstop" position="910,570" size="236,30" zPosition="3" font="Regular;24" valign="center" halign="center" backgroundColor="red" />
+  <widget name="labrun" position="910,570" size="236,30" zPosition="3" font="Regular;24" valign="center" halign="center" backgroundColor="green" />
+</screen>
+  <!-- Blue Panel > Red > Gestore DTT Line8  -->
+  <screen name="ItalyDttModule" title="DTT Download Manager" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+    <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="0,0" size="1281,50" zPosition="-11" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italysat.png" position="227,139" size="330,204" />
+    <!-- /*ClockWidget-->
+    <eLabel backgroundColor="metrixBackground" position="208,91" size="366,300" transparent="0" zPosition="-1" />
+    <!-- /*ClockWidget-->
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="415,401" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="265,444" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %b</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="287,415" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <eLabel backgroundColor="metrixBackground" position="208,410" size="368,70" transparent="0" zPosition="-1" />
+    <!--ClockWidget */-->
+    <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+    <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="606,92" size="525,547" zPosition="-11" />
+    <!-- /*Buttons-->
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="217,5" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="434,5" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="657,5" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="883,5" size="30,40" />
+    <widget backgroundColor="metrixBackground" font="Regular; 22" halign="left" position="258,15" render="Label" size="160,30" source="key_red" transparent="1" zPosition="1" />
+    <widget backgroundColor="metrixBackground" font="Regular; 22" halign="left" position="472,15" render="Label" size="160,30" source="key_green" transparent="1" zPosition="1" />
+    <widget backgroundColor="metrixBackground" font="Regular; 22" halign="left" position="699,15" render="Label" size="160,30" source="key_yellow" transparent="1" zPosition="1" />
+    <widget backgroundColor="metrixBackground" font="Regular; 22" halign="left" position="926,15" render="Label" size="160,30" source="key_blue" transparent="1" zPosition="1" />
+    <!--Button */-->
+    <!-- ItalySat -->
+    <widget enableWrapAround="1" position="596,107" render="Listbox" scrollbarMode="showNever" size="547,513" source="list" transparent="1">
+      <convert type="TemplatedMultiContent">
+  					{"template": [
+  								MultiContentEntryText(pos = (55, 5), size = (480, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+  								MultiContentEntryPixmapAlphaBlend(pos = (25, 5), size = (24, 24), png = 3) # index 4 is the status pixmap
+  						],
+  					"fonts": [gFont("Regular", 24),gFont("Regular", 16)],
+  					"itemHeight": 40
+  					}
+  				</convert>
+    </widget>
+  </screen>
+
+  <!-- Blue Panel > Red > Gestore WIFI Line9  -->
+
+  <screen name="ItalyWifiModule" title="Wifi Download Manager" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+    <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="0,0" size="1281,50" zPosition="-11" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italysat.png" position="227,139" size="330,204" />
+    <!-- /*ClockWidget-->
+    <eLabel backgroundColor="metrixBackground" position="208,91" size="366,300" transparent="0" zPosition="-1" />
+    <!-- /*ClockWidget-->
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="415,401" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="265,444" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %b</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="287,415" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <eLabel backgroundColor="metrixBackground" position="208,410" size="368,70" transparent="0" zPosition="-1" />
+    <!--ClockWidget */-->
+    <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+    <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="606,92" size="525,547" zPosition="-11" />
+    <!-- /*Buttons-->
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="217,0" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="434,0" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,0" size="30,40" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" position="258,10" render="Label" size="160,30" source="key_red" transparent="1" zPosition="1" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" position="472,10" render="Label" size="160,30" source="key_green" transparent="1" zPosition="1" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" position="840,10" render="Label" size="160,30" source="key_yellow" transparent="1" zPosition="1" />
+    <!--Button */-->
+    <!-- ItalySat -->
+    <widget enableWrapAround="1" position="596,107" render="Listbox" scrollbarMode="showNever" size="547,513" source="list" transparent="1">
+      <convert type="TemplatedMultiContent">
+  					{"template": [
+  								MultiContentEntryText(pos = (55, 5), size = (480, 28), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+  								MultiContentEntryPixmapAlphaBlend(pos = (25, 5), size = (24, 24), png = 3) # index 4 is the status pixmap
+  						],
+  					"fonts": [gFont("Regular", 24),gFont("Regular", 16)],
+  					"itemHeight": 40
+  					}
+  				</convert>
+    </widget>
+  </screen>
+
+  <!-- Blue Panel > Red > Gestore Network  -->
+
+  <screen name="ItalyNetworkList" title="ItalySat Network List" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+    <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italysat.png" position="227,139" size="330,204" />
+    <!-- /*ClockWidget-->
+    <eLabel backgroundColor="metrixBackground" position="208,91" size="366,300" transparent="0" zPosition="-1" />
+    <!-- /*ClockWidget-->
+    <widget backgroundColor="metrixBackground" font="Regular; 60" halign="left" position="415,401" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="265,444" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %b</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="287,415" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <eLabel backgroundColor="metrixBackground" position="208,410" size="368,70" transparent="0" zPosition="-1" />
+    <!--ClockWidget */-->
+    <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="606,92" size="525,547" zPosition="-11" />
+    <!-- ItalySat -->
+    <widget enableWrapAround="1" position="596,107" render="Listbox" scrollbarMode="showNever" size="547,513" source="list" transparent="1">
+      <convert type="TemplatedMultiContent">
+  					{"template": [
+  								MultiContentEntryText(pos = (66, 5), size = (480, 30), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+  								MultiContentEntryPixmapAlphaBlend(pos = (25, 5), size = (36, 36), png = 1) # index 1 is the status pixmap
+  						],
+  					"fonts": [gFont("Regular", 24),gFont("Regular", 16)],
+  					"itemHeight": 45
+  					}
+  				</convert>
+    </widget>
+  </screen>
+
+  <!-- Blue Panel > Red > Gestore Network > OpenVPN  -->
+
+  <screen name="NetworkServiceSetup" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  	  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  	  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  	  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  	  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  	  <!-- /*ClockWidget-->
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+  	    <convert type="ClockToText">Default</convert>
+  	  </widget>
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+  	    <convert type="ClockToText">Format:%e. %b</convert>
+  	  </widget>
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+  	    <convert type="ClockToText">Format:%A</convert>
+  	  </widget>
+  	  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  	  <!--ClockWidget */-->
+  	  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  	  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  	  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+  	  <!-- ItalySat -->
+  	<widget name="lab1" position="640,220" size="150,30" font="Regular;20" valign="center" transparent="0" />
+  	<widget name="labactive" position="815,220" size="250,30" font="Regular;20" valign="center" transparent="0" />
+  	<widget name="lab2" position="640,270" size="150,30" font="Regular;20" valign="center" transparent="0" />
+  	<widget name="labstop" position="815,270" size="250,30" font="Regular;20" valign="center" halign="center" backgroundColor="red" />
+  	<widget name="labrun" position="815,270" size="250,30" zPosition="1" font="Regular;20" valign="center" halign="center" backgroundColor="green" />
+  	</screen>
+  <!-- Blue Panel > Red > Gestore Network > InaDyn  -->
+
+<screen name="NetworkInadyn" title="ItaltSat Inadyn Manager" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_menu.png" position="1146,52" size="81,40" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+<widget name="autostart" position="538,200" size="100,24" font="Regular;20" valign="center" transparent="0" />
+<widget name="labdisabled" position="649,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+<widget name="labactive" position="649,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+<widget name="status" position="832,200" size="150,24" font="Regular;20" valign="center" transparent="0" />
+<widget name="labstop" position="990,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+<widget name="labrun" position="990,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+<widget name="time" position="545,317" size="230,30" font="Regular;20" valign="center" transparent="1" />
+<widget name="labtime" position="797,317" size="100,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+<widget name="username" position="545,363" size="150,30" font="Regular;20" valign="center" transparent="1" />
+<widget name="labuser" position="720,363" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+<widget name="password" position="545,408" size="150,30" font="Regular;20" valign="center" transparent="1" />
+<widget name="labpass" position="720,408" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+<widget name="alias" position="545,455" size="150,30" font="Regular;20" valign="center" transparent="1" />
+<widget name="labalias" position="720,455" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+<widget name="sinactive" position="545,496" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+<widget name="sactive" position="545,495" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+<widget name="system" position="594,497" size="100,30" font="Regular;20" valign="center" transparent="1" />
+<widget name="labsys" position="720,497" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+  </screen>
+<screen name="NetworkInadynSetup" title="Inadyn Setup" position="center,center" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+    <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+    <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+    <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+    <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+    <!-- /*ClockWidget-->
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %b</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+    <!--ClockWidget */-->
+    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+    <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+    <!-- ItalySat -->
+  <widget name="config" position="459,137" size="750,494" scrollbarMode="showOnDemand" transparent="1" />
+	<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="461,389" size="440,350" transparent="1" alphatest="on" />
+	<ePixmap position="1140,600" size="81,40" zPosition="10" pixmap="MetrixHD/buttons/key_exit.png" transparent="1" alphatest="blend" />
+</screen>
+
+  <screen name="NetworkInadynLog" title="ItalySat LogView" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget name="infotext" position="470,135" size="750,494" font="Regular;22" transparent="1" />
+</screen>
+
+  <screen name="InadynSetup" title="ItalySat Inadyn Config" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget name="config" position="470,135" size="750,494" scrollbarMode="showOnDemand" transparent="1" />
+</screen>
+
+  <!-- Blue Panel > Red > Gestore Network > Telnet  -->
+
+  <screen name="NetworkSamba" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget name="lab1" position="470,135" size="750,494" font="Regular;24" valign="top" foregroundColor="metrixForeground" backgroundColor="transpBlack" transparent="1" />
+  <widget name="lab2" position="590,570" size="317,30" zPosition="3" font="Regular;24" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget name="labactive" position="610,135" size="150,24" font="Regular;20" valign="center" halign="center" backgroundColor="transpBlack" zPosition="2" />
+  <widget name="labstop" position="910,570" size="236,30" zPosition="3" font="Regular;24" valign="center" halign="center" backgroundColor="red" />
+  <widget name="labrun" position="910,570" size="236,30" zPosition="3" font="Regular;24" valign="center" halign="center" backgroundColor="green" />
+</screen>
+
+  <!-- Blue Panel > Red > Gestore Network > Djmount  -->
+
+  <screen name="NetworkuShare" title="ItalySat UPnP Client Panel" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_menu.png" position="1146,52" size="81,40" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+	<widget name="autostart" position="510,200" size="100,24" font="Regular;20" valign="center" transparent="0" />
+	<widget name="labdisabled" position="610,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+	<widget name="labactive" position="610,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+	<widget name="status" position="740,200" size="150,24" font="Regular;20" valign="center" transparent="0" />
+	<widget name="labstop" position="890,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+	<widget name="labrun" position="890,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+	<widget name="username" position="510,250" size="150,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="labuser" position="660,250" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+	<widget name="iface" position="510,290" size="150,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="labiface" position="660,290" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+	<widget name="port" position="510,330" size="150,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="labport" position="660,330" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+	<widget name="telnetport" position="510,370" size="150,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="labtelnetport" position="660,370" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+	<widget name="sharedir" position="510,410" size="150,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="labsharedir" position="660,410" size="310,90" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+	<widget name="web" position="510,500" size="180,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="webinactive" position="700,500" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+	<widget name="webactive" position="700,500" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+	<widget name="telnet" position="510,530" size="180,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="telnetinactive" position="700,530" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+	<widget name="telnetactive" position="700,530" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+	<widget name="xbox" position="750,500" size="200,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="xboxinactive" position="970,500" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+	<widget name="xboxactive" position="970,500" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+	<widget name="dlna" position="750,530" size="200,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="dlnainactive" position="970,530" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+	<widget name="dlnaactive" position="970,530" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+</screen>
+
+<screen name="NetworkuShareSetup" title="ItalySat uShareSetup" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+	  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+	  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+	  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+	  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+	  <!-- /*ClockWidget-->
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+	    <convert type="ClockToText">Default</convert>
+	  </widget>
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+	    <convert type="ClockToText">Format:%e. %b</convert>
+	  </widget>
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+	    <convert type="ClockToText">Format:%A</convert>
+	  </widget>
+	  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+	  <!--ClockWidget */-->
+	  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+	  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+	  <!-- ItalySat -->
+	  <widget name="config" position="459,137" size="750,494" scrollbarMode="showOnDemand" transparent="1" />
+		<widget name="HelpWindow" pixmap="skin_default/vkey_icon.png" position="461,389" size="440,350" transparent="1" alphatest="on" />
+	  <ePixmap pixmap="skin_default/buttons/key_text.png" position="842,640" zPosition="4" size="35,25" alphatest="on" transparent="1" />
+</screen>
+
+	  <screen name="uShareSelection" title="ItalySat UPnP Client Panel" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+	  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+	  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+	  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+	  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+	  <!-- /*ClockWidget-->
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+	    <convert type="ClockToText">Default</convert>
+	  </widget>
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+	    <convert type="ClockToText">Format:%e. %b</convert>
+	  </widget>
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+	    <convert type="ClockToText">Format:%A</convert>
+	  </widget>
+	  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+	  <!--ClockWidget */-->
+	  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+	  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+	  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+	  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+	  <!-- ItalySat -->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+<widget name="checkList" position="473,156" size="550,350" transparent="1" scrollbarMode="showOnDemand" />
+</screen>
+
+  <!-- Blue Panel > Red > Gestore Network > Mediatomb  -->
+
+  <screen name="ItalyMediatombPanel" title="ItalySat UPnP Server Panel" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget name="lab1" position="470,135" size="750,494" font="Regular;24" valign="top" foregroundColor="metrixForeground" backgroundColor="transpBlack" transparent="1" />
+  <widget name="lab2" position="590,570" size="317,30" zPosition="3" font="Regular;24" valign="center" backgroundColor="transpBlack" transparent="1" />
+  <widget name="labstop" position="910,570" size="236,30" zPosition="3" font="Regular;24" valign="center" halign="center" backgroundColor="red" />
+  <widget name="labstart" position="910,570" size="236,30" zPosition="3" font="Regular;24" valign="center" halign="center" backgroundColor="green" />
+</screen>
+
+
+  <!-- Blue Panel > Red > Gestore Network > MiniDLNa  -->
+
+  <screen name="NetworkMiniDLNA" title="ItalySat MiniDLNa Server Panel" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/key_menu.png" position="1146,52" size="81,40" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+
+  <!-- ItalySat -->
+	<widget name="autostart" position="510,200" size="100,24" font="Regular;20" valign="center" transparent="0" />
+	<widget name="labdisabled" position="610,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+	<widget name="labactive" position="610,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+	<widget name="status" position="740,200" size="150,24" font="Regular;20" valign="center" transparent="0" />
+	<widget name="labstop" position="890,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="red" zPosition="1" />
+	<widget name="labrun" position="890,200" size="100,24" font="Regular;20" valign="center" halign="center" backgroundColor="green" zPosition="2" />
+	<widget name="username" position="510,250" size="150,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="labuser" position="660,250" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+	<widget name="iface" position="510,290" size="150,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="labiface" position="660,290" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+	<widget name="port" position="510,330" size="150,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="labport" position="660,330" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+	<widget name="serialno" position="510,370" size="150,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="labserialno" position="660,370" size="310,30" font="Regular;20" valign="center" backgroundColor="#4D5375" />
+	<widget name="sharedir" position="510,410" size="150,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="labsharedir" position="660,410" size="310,90" font="Regular;20" valign="top" backgroundColor="#4D5375" />
+	<widget name="inotify" position="510,500" size="180,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="inotifyinactive" position="700,500" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+	<widget name="inotifyactive" position="700,500" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+	<widget name="tivo" position="510,530" size="180,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="tivoinactive" position="700,530" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+	<widget name="tivoactive" position="700,530" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+	<widget name="dlna" position="750,500" size="200,30" font="Regular;20" valign="center" transparent="1" />
+	<widget name="dlnainactive" position="970,500" zPosition="1" pixmap="skin_default/icons/lock_off.png" size="32,32" alphatest="on" />
+	<widget name="dlnaactive" position="970,500" zPosition="2" pixmap="skin_default/icons/lock_on.png" size="32,32" alphatest="on" />
+</screen>
+
+  <!-- Blue Panel > Red > Gestore Network > Apple AFP  -->
+
+
+  <!-- [****** ITALYSAT GREEN PANEL ******] -->
+  <!-- [****** ITALYSAT GREEN PANEL ******] -->
+  <!-- [****** ITALYSAT GREEN PANEL ******] -->
+  <!-- [****** ITALYSAT GREEN PANEL ******] -->
+  <!-- (XXX) [GREEN PANEL] Green Panel -->
+<screen name="ItalyGreen" title="ItalySat GreenPanel" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italysat.png" position="227,139" size="330,204" />
+    <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+    <!-- /*ClockWidget-->
+    <eLabel backgroundColor="metrixBackground" position="208,91" size="366,300" transparent="0" zPosition="-1" />
+    <!-- /*ClockWidget-->
+    <widget backgroundColor="metrixBackground" font="Regular; 60" halign="left" position="415,401" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="265,444" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %b</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="287,415" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <eLabel backgroundColor="metrixBackground" position="208,410" size="368,70" transparent="0" zPosition="-1" />
+    <!--ClockWidget */-->
+    <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="606,92" size="525,547" zPosition="-11" />
+    <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="0,0" size="1281,50" zPosition="-11" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="217,5" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="434,5" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="657,5" size="30,40" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="883,5" size="30,40" />
+    <widget backgroundColor="metrixBackground" font="Regular; 22" halign="left" position="258,15" render="Label" size="160,30" source="key_red" transparent="1" zPosition="1" />
+    <widget backgroundColor="metrixBackground" font="Regular; 22" halign="left" position="472,15" render="Label" size="160,30" source="key_green" transparent="1" zPosition="1" />
+    <widget backgroundColor="metrixBackground" font="Regular; 22" halign="left" position="699,15" render="Label" size="160,30" source="key_yellow" transparent="1" zPosition="1" />
+    <widget backgroundColor="metrixBackground" font="Regular; 22" halign="left" position="926,15" render="Label" size="160,30" source="key_blue" transparent="1" zPosition="1" />
+    <!-- ItalySat -->
+    <widget enableWrapAround="1" position="595,109" render="Listbox" scrollbarMode="showNever" size="547,513" source="list" transparent="1">
+      <convert type="TemplatedMultiContent">
+  						{"template": [
+  								MultiContentEntryText(pos = (135, 2), size = (570, 33), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0), # index 1 is the description
+  								MultiContentEntryText(pos = (135, 28), size = (570, 26), font=1, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1), # index 1 is the description
+  								MultiContentEntryPixmapAlphaBlend(pos = (20, 5), size = (100, 50), png = 2), # index 4 is the status pixmap
+  						],
+  					"fonts": [gFont("Regular", 24),gFont("Regular", 16)],
+  					"itemHeight": 60
+  					}
+  				</convert>
+    </widget>
+    <!-- ItalySat -->
+	<widget source="conn" render="Label" zPosition="1" position="232,489" size="330,180" font="Regular;20" valign="top" halign="center" foregroundColor="metrixGreen" transparent="1" backgroundColor="black" />	  </screen>
+  <!-- Green Panel > Blue > Memory -->
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ItalyMemoryPanel" title="ItalySat Memory Info" position="0,0" size="1280,720">
+    <eLabel backgroundColor="metrixBackground" position="40,25" size="1205,650" zPosition="-10" />
+    <widget backgroundColor="metrixBackground" font="SetrixHD; 50" halign="left" position="1103,28" render="Label" size="140,60" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 15" foregroundColor="metrixAccent1" halign="right" position="931,37" render="Label" size="161,27" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 16" foregroundColor="metrixAccent1" halign="right" position="931,64" render="Label" size="161,29" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %b</convert>
+    </widget>
+    <eLabel backgroundColor="metrixBackground" font="SetrixHD;35" position="70,47" size="800,43" text="Memory Panel" transparent="1" />
+    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italysat.png" position="894,109" size="330,204" />
+    <!-- ItalySat -->
+    <ePixmap position="60,122" zPosition="0" size="80,43" pixmap="skin_default/italy_icons/ico_sysflash.png" alphatest="blend" transparent="1" />
+    <ePixmap position="140,118" zPosition="0" size="159,21" pixmap="skin_default/italy_icons/sysbar_bw.png" alphatest="blend" transparent="1" />
+    <widget name="flashbar" position="140,118" pixmap="skin_default/italy_icons/sysbar.png" size="159,21" borderWidth="0" zPosition="1" borderColor="red" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="flash1" position="315,117" size="500,22" font="Regular;17" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="flash2" position="140,148" size="500,28" font="Regular; 20" halign="left" zPosition="1" transparent="1" foregroundColor="metrixGreen" backgroundColor="metrixBackground" />
+    <ePixmap position="60,210" zPosition="0" size="80,80" pixmap="skin_default/italy_icons/ico_sysram.png" alphatest="blend" transparent="1" />
+    <ePixmap position="140,207" zPosition="0" size="159,21" pixmap="skin_default/italy_icons/sysbar_bw.png" alphatest="blend" transparent="1" />
+    <widget name="rambar" position="140,207" pixmap="skin_default/italy_icons/sysbar.png" size="159,21" borderWidth="0" zPosition="1" borderColor="red" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="ram1" position="143,207" size="159,21" font="Regular;17" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixGreen" />
+    <widget name="ram2" position="315,207" size="500,22" font="Regular;17" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="140,242" zPosition="0" size="159,21" pixmap="skin_default/italy_icons/sysbar_bw.png" alphatest="blend" transparent="1" />
+    <widget name="swapbar" position="140,242" pixmap="skin_default/italy_icons/sysbar.png" size="159,21" borderWidth="0" zPosition="1" borderColor="red" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="swap1" position="143,242" size="159,21" font="Regular;17" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixGreen" />
+    <widget name="swap2" position="315,242" size="500,22" font="Regular;17" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="140,277" zPosition="0" size="159,21" pixmap="skin_default/italy_icons/sysbar_bw.png" alphatest="blend" transparent="1" />
+    <widget name="totalbar" position="140,277" pixmap="skin_default/italy_icons/sysbar.png" size="159,21" borderWidth="0" zPosition="1" borderColor="red" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="total1" position="315,277" size="500,22" font="Regular;17" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="total2" position="140,307" size="500,28" font="Regular; 20" halign="left" zPosition="1" transparent="1" foregroundColor="metrixGreen" backgroundColor="metrixBackground" />
+    <ePixmap position="50,180" size="760,40" pixmap="skin_default/italy_icons/linebox.png" zPosition="3" alphatest="blend" transparent="1" />
+    <ePixmap position="50,340" size="760,40" pixmap="skin_default/italy_icons/linebox.png" zPosition="3" alphatest="blend" transparent="1" />
+    <ePixmap position="60,375" zPosition="0" size="80,80" pixmap="skin_default/italy_icons/ico_syshdd.png" alphatest="blend" transparent="1" />
+    <ePixmap position="140,370" zPosition="0" size="159,21" pixmap="skin_default/italy_icons/sysbar_bw.png" alphatest="blend" transparent="1" />
+    <widget name="usbbar" position="140,370" pixmap="skin_default/italy_icons/sysbar.png" size="159,21" borderWidth="0" zPosition="1" borderColor="red" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="usb1" position="143,370" size="159,21" font="Regular;17" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixGreen" />
+    <widget name="usb2" position="315,370" size="500,22" font="Regular;17" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="140,420" zPosition="0" size="159,21" pixmap="skin_default/italy_icons/sysbar_bw.png" alphatest="blend" transparent="1" />
+    <widget name="hddbar" position="140,420" pixmap="skin_default/italy_icons/sysbar.png" size="159,21" borderWidth="0" zPosition="1" borderColor="blue" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="hdd1" position="143,420" size="159,21" font="Regular;17" halign="left" zPosition="1" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixGreen" />
+    <widget name="hdd2" position="315,420" size="500,22" font="Regular;17" halign="left" zPosition="1" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="140,470" zPosition="0" size="159,21" pixmap="skin_default/italy_icons/sysbar_bw.png" alphatest="blend" transparent="1" />
+    <widget name="cfbar" position="140,470" pixmap="skin_default/italy_icons/sysbar.png" size="159,21" borderWidth="0" zPosition="1" borderColor="blue" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="cf1" position="143,470" size="159,21" font="Regular;17" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixGreen" />
+    <widget name="cf2" position="315,469" size="500,22" font="Regular;17" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" />
+    <ePixmap position="140,520" zPosition="0" size="159,21" pixmap="skin_default/italy_icons/sysbar_bw.png" alphatest="blend" transparent="1" />
+    <widget name="totbar" position="140,520" pixmap="skin_default/italy_icons/sysbar.png" size="159,21" borderWidth="0" zPosition="1" borderColor="blue" backgroundColor="metrixBackground" transparent="1" />
+    <widget name="tot1" position="140,555" size="500,28" font="Regular; 20" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" foregroundColor="metrixGreen" />
+    <widget name="tot2" position="315,520" size="500,22" font="Regular;17" halign="left" zPosition="2" backgroundColor="metrixBackground" transparent="1" />
+    <!-- Active Services Panel -->
+    <ePixmap name="ssh" size="210,25" position="900,382" zPosition="2" pixmap="skin_default/italy_icons/ssh.png" alphatest="blend" transparent="1" />
+    <ePixmap name="telnet" size="210,25" position="900,418" zPosition="2" pixmap="skin_default/italy_icons/telnet.png" alphatest="blend" transparent="1" />
+    <ePixmap name="ftp" size="210,25" position="900,460" zPosition="2" pixmap="skin_default/italy_icons/ftp.png" alphatest="blend" transparent="1" />
+    <ePixmap name="vpn" size="210,25" position="900,500" zPosition="2" pixmap="skin_default/italy_icons/vpn.png" alphatest="blend" transparent="1" />
+    <ePixmap name="samba" size="210,25" position="900,541" zPosition="2" pixmap="skin_default/italy_icons/samba.png" alphatest="blend" transparent="1" />
+    <ePixmap name="nfs" size="210,25" position="900,580" zPosition="2" pixmap="skin_default/italy_icons/nfs.png" alphatest="blend" transparent="1" />
+    <ePixmap size="60,25" position="1145,382" zPosition="1" pixmap="skin_default/italy_icons/spy_blue.png" alphatest="blend" transparent="1" />
+    <widget name="bot1" size="60,25" position="1145,382" zPosition="2" pixmap="skin_default/italy_icons/spy_gray.png" alphatest="on" transparent="1" />
+    <!--                                                                                                                                SSH -->
+    <ePixmap size="60,25" position="1145,418" zPosition="1" pixmap="skin_default/italy_icons/spy_blue.png" alphatest="blend" transparent="1" />
+    <widget name="bot2" size="60,25" position="1145,418" zPosition="2" pixmap="skin_default/italy_icons/spy_gray.png" alphatest="on" transparent="1" />
+    <!-- widget name="bot3" size="60,25" position="1145,446" zPosition="1" pixmap="skin_default/italy_icons/spy_gray.png" alphatest="on" transparent="1" TELNET -->
+    <ePixmap size="60,25" position="1145,460" zPosition="1" pixmap="skin_default/italy_icons/spy_blue.png" alphatest="blend" transparent="1" />
+    <widget name="bot4" size="60,25" position="1145,460" zPosition="2" pixmap="skin_default/italy_icons/spy_gray.png" alphatest="on" transparent="1" />
+    <!-- widget name="bot5" size="60,25" position="1145,487" zPosition="1" pixmap="skin_default/italy_icons/spy_gray.png" alphatest="on" transparent="1" FTP -->
+    <ePixmap size="60,25" position="1145,500" zPosition="1" pixmap="skin_default/italy_icons/spy_blue.png" alphatest="blend" transparent="1" />
+    <widget name="bot6" size="60,25" position="1145,500" zPosition="2" pixmap="skin_default/italy_icons/spy_gray.png" alphatest="on" transparent="1" />
+    <!-- widget name="bot7" size="60,25" position="1145,526" zPosition="1" pixmap="skin_default/italy_icons/spy_gray.png" alphatest="on" transparent="1" VPN -->
+    <ePixmap size="60,25" position="1145,541" zPosition="1" pixmap="skin_default/italy_icons/spy_blue.png" alphatest="blend" transparent="1" />
+    <widget name="bot8" size="60,25" position="1145,541" zPosition="2" pixmap="skin_default/italy_icons/spy_gray.png" alphatest="on" transparent="1" />
+    <!-- widget name="bot9" size="60,25" position="1145,564" zPosition="1" pixmap="skin_default/italy_icons/spy_gray.png" alphatest="on" transparent="1" SAMBA -->
+    <ePixmap size="60,25" position="1145,580" zPosition="1" pixmap="skin_default/italy_icons/spy_blue.png" alphatest="blend" transparent="1" />
+    <widget name="bot10" size="60,25" position="1145,580" zPosition="2" pixmap="skin_default/italy_icons/spy_gray.png" alphatest="on" transparent="1" />
+    <!-- widget name="bot11" size="60,25" position="1145,606" zPosition="1" pixmap="skin_default/italy_icons/spy_gray.png" alphatest="on" transparent="1" NFS -->
+  </screen>
+  <!-- Green Panel > Green > Script -->
+  <screen name="ItalyScriptPanel" title="ItalySat Script" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget source="list" render="Listbox" position="470,135" size="750,494" zPosition="2" scrollbarMode="showOnDemand" transparent="1">
+    <convert type="TemplatedMultiContent">
+           {"template": [
+           MultiContentEntryText(pos = (20, 1), size = (720, 34), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0),
+           ],
+           "fonts": [gFont("Regular", 24)],
+           "itemHeight": 45
+          }
+        </convert>
+  </widget>
+  <widget name="labstatus" position="56,430" size="330,230" font="Regular;24" valign="top" halign="center" foregroundColor="metrixGreen" transparent="1" backgroundColor="black" />
+  
+</screen>
+  <!-- Green Panel > Red > Addon List -->
+  <screen name="ItalyAddonsMenu" title="ItalySat Addons" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italysat.png" position="227,139" size="330,204" />
+    <!-- /*ClockWidget-->
+    <eLabel backgroundColor="metrixBackground" position="208,91" size="366,300" transparent="0" zPosition="-1" />
+    <!-- /*ClockWidget-->
+    <widget backgroundColor="metrixBackground" font="Regular; 60" halign="left" position="415,401" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="265,444" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%e. %b</convert>
+    </widget>
+    <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="287,415" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+      <convert type="ClockToText">Format:%A</convert>
+    </widget>
+    <eLabel backgroundColor="metrixBackground" position="208,410" size="368,70" transparent="0" zPosition="-1" />
+    <!--ClockWidget */-->
+    <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="606,92" size="525,547" zPosition="-11" />
+    <!-- ItalySat -->
+    <widget enableWrapAround="1" position="596,107" render="Listbox" scrollbarMode="showNever" size="547,513" source="list" transparent="1">
+    <convert type="TemplatedMultiContent">
+  					{"template": [
+  								MultiContentEntryText(pos = (66, 5), size = (480, 32), font=0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+  								MultiContentEntryPixmapAlphaBlend(pos = (25, 5), size = (36, 36), png = 2) # index 1 is the status pixmap
+  						],
+  					"fonts": [gFont("Regular", 24),gFont("Regular", 16)],
+  					"itemHeight": 50
+  					}
+  				</convert>
+			</widget>
+	<widget source="conn" render="Label" zPosition="1" position="231,317" size="330,65" font="Regular;20" valign="top" halign="center" foregroundColor="metrixGreen" transparent="1" backgroundColor="black" />	  </screen>
+  <!-- Green Panel > Red > Extra CAM Download -->
+  <screen name="ItalyExtraList" title="Extra Addons Manager" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget source="list" render="Listbox" position="470,135" size="715,494" zPosition="2" scrollbarMode="showOnDemand" transparent="1">
+    <convert type="TemplatedMultiContent">
+           {"template": [
+           MultiContentEntryText(pos = (20, 1), size = (720, 34), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+           ],
+           "fonts": [gFont("Regular", 24)],
+           "itemHeight": 45
+          }
+        </convert>
+  </widget>
+</screen>
+  <screen name="ItalyExtraDown" title="Downloads Extra Plugins" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget source="list" render="Listbox" position="470,135" size="715,494" zPosition="2" scrollbarMode="showOnDemand" transparent="1">
+    <convert type="TemplatedMultiContent">
+           {"template": [
+           MultiContentEntryText(pos = (20, 1), size = (720, 34), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1),
+           ],
+           "fonts": [gFont("Regular", 24)],
+           "itemHeight": 45
+          }
+        </convert>
+  </widget>
+  <widget source="conn" render="Label" zPosition="1" position="56,430" size="330,230" font="Regular;20" valign="top" halign="center" foregroundColor="metrixGreen" transparent="1" backgroundColor="black" />
+
+</screen>
+  <screen name="ItalyDownloader" title="ItalySat Addons" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italysat.png" position="227,139" size="330,204" />
+  <!-- /*ClockWidget-->
+  <eLabel backgroundColor="metrixBackground" position="208,91" size="366,300" transparent="0" zPosition="-1" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="Regular; 60" halign="left" position="415,401" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="265,444" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="Regular; 20" foregroundColor="metrixAccent1" halign="right" position="287,415" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="208,410" size="368,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+  <eLabel backgroundColor="metrixBackground" foregroundColor="metrixBackground" name="" position="606,137" size="592,203" zPosition="-11" />
+  <!-- ItalySat -->
+  <widget source="fname" render="Label" position="610,147" size="580,75" font="Regular;18" halign="center" valign="center" foregroundColor="metrixForeground" backgroundColor="metrixBackground2" transparent="1" />
+  <widget source="progressbar" render="Progress" pixmap="MetrixHD/colors/0070ad11.png" position="610,233" size="580,12" zPosition="2" transparent="1" />
+  <widget source="status" render="Label" position="610,258" zPosition="3" size="580,71" font="Regular;22" halign="center" backgroundColor="metrixBackground" transparent="1" />
+</screen>
+
+  <!-- Green Panel > Red > Addon Manual Install -->
+
+  <screen backgroundColor="transparent" flags="wfNoBorder" name="ItalyIPKInstaller" title="Manual Install" position="0,0" size="1280,720">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <widget name="waitingtext" position="0,0" size="0,0" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="635,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="850,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="416,636" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;20" halign="left" position="670,640" render="Label" size="180,24" source="key_green" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;20" halign="left" position="885,640" render="Label" size="180,24" source="key_yellow" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" position="450,640" render="Label" size="180,24" source="key_red" transparent="1" zPosition="1" />
+  <widget font="SetrixHD; 20" halign="center" name="lab1" position="470,150" size="700,28" transparent="1" zPosition="2" />
+  <widget backgroundColor="metrixBackground" foregroundColor="foreground" name="list" position="470,180" scrollbarMode="showOnDemand" size="700,450" transparent="1" />
+</screen>
+
+  <!-- FINE GREEN PANEL -->
+  <!-- MULTIBOOT -->
+
+  <screen name="ItalyBootInstallation" title="ItalyBoot - Installation" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget name="label1" position="470,136" size="715,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="un9f1313" transparent="1" />
+  <widget name="label2" position="470,169" size="715,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="un9f1313" transparent="1" />
+  <widget name="config" position="470,290" size="715,300" scrollbarMode="showOnDemand" />
+</screen>
+
+  <screen name="ItalyBootImageChoose" title="ItalyBoot - Menu" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/yellow.png" position="805,637" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/blue.png" position="1000,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD;22" halign="left" name="key_yellow" position="840,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_blue" position="1035,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/ItalyBoot/icons/dev_hdd.png" position="470,180" size="80,80" alphatest="on" />
+  <ePixmap pixmap="/usr/lib/enigma2/python/Plugins/Extensions/ItalyBoot/icons/dev_usb.png" position="1110,180" size="80,80" alphatest="on" />
+  <widget name="label1" position="470,136" size="715,30" zPosition="1" halign="center" font="Regular;25" backgroundColor="un9f1313" transparent="1" />
+  <widget name="label2" position="470,180" size="715,290" zPosition="1" halign="center" font="Regular;20" backgroundColor="un9f1313" transparent="1" />
+  <widget name="config" position="470,290" size="715,300" scrollbarMode="showOnDemand" />
+</screen>
+
+  <screen name="ItalyBootImageInstall" title="ItalyBoot - Image Installation" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget name="config" position="470,135" size="715,494" scrollbarMode="showOnDemand" />
+</screen>
+
+  <!-- Altri menu e Plugin -->
+  <!-- Altri menu e Plugin -->
+  <!-- Altri menu e Plugin -->
+  <!-- Altri menu e Plugin -->
+  <!-- Altri menu e Plugin -->
+
+  <!-- Download Linguaggi (ricordati di mettere il tasto ROSSO nel wizard e nel menu lingua della skin!!! Per richiamare questo pannello) -->
+  <screen name="LanguageDownload" title="Language Download" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget name="lab1" position="470,135" size="715,420" scrollbarMode="showOnDemand" transparent="1" />
+  <widget name="textinfo" position="470,556" zPosition="2" size="715,70" valign="center" halign="left" font="Regular;22" foregroundColor="metrixForeground" backgroundColor="transpBlack" transparent="1" />
+</screen>
+
+  <!-- Gigablue VFD -->
+
+  <screen name="VFD_GigaSetup" title="VFD Giga Setup" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+  <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+  <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+  <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+  <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+  <!-- /*ClockWidget-->
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%e. %b</convert>
+  </widget>
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+    <convert type="ClockToText">Format:%A</convert>
+  </widget>
+  <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+  <!--ClockWidget */-->
+  <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+  <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+  <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+  <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+  <!-- ItalySat -->
+  <widget name="config" position="470,135" size="715,494" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
+</screen>
+
+	<!-- Metrix Weather -->
+	<screen name="WeatherList" title="WeaterCity" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+	    <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+	    <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+	    <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+	    <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+	    <!-- /*ClockWidget-->
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+	      <convert type="ClockToText">Default</convert>
+	    </widget>
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+	      <convert type="ClockToText">Format:%e. %b</convert>
+	    </widget>
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+	      <convert type="ClockToText">Format:%A</convert>
+	    </widget>
+	    <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+	    <!--ClockWidget */-->
+	    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+	    <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+	    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+	    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+	     <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+	    <!-- ItalySat -->
+	    <widget name="myMenu" position="470,140" size="715,450" scrollbarMode="showOnDemand" />
+	</screen>
+	<screen name="LED_GigaSetup" position="0,0" size="1280,720" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
+	    <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+	    <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+	    <widget font="SetrixHD; 150" foregroundColor="metrixPreTrans" position="20,552" render="Label" size="1273,296" source="title" transparent="1" valign="top" zPosition="-50" />
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+	    <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+	    <!-- /*ClockWidget-->
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+	      <convert type="ClockToText">Default</convert>
+	    </widget>
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+	      <convert type="ClockToText">Format:%e. %b</convert>
+	    </widget>
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+	      <convert type="ClockToText">Format:%A</convert>
+	    </widget>
+	    <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+	    <!--ClockWidget */-->
+	    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+	    <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+	    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+	    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_red" position="450,640" size="160,24" transparent="1" zPosition="1" />
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" name="key_green" position="645,640" size="160,24" transparent="1" zPosition="1" />
+	    <!-- ItalySat -->
+		<eLabel text="Setup LED Gigablue" position="70,47" foregroundColor="metrixAccent1" size="525,50" noWrap="0" font="global_title; 35" backgroundColor="layer-a-background" transparent="1" />
+	    <widget name="config" position="470,135" size="715,494" font="Regular;22" backgroundColor="transpBlack" transparent="1" />
+		<widget name="description" position="825,420" size="380,175" font="Regular; 20" foregroundColor="metrixAccent1" halign="center" backgroundColor="transpBlack" valign="center" transparent="1"/>
+	</screen>
+	
+	<screen backgroundColor="transparent" flags="wfNoBorder" name="UsbFormat" position="0,0" size="1280,720" title="Usb Format Wizard">
+	    <eLabel backgroundColor="metrixAccent1" name="new eLabel" position="462,119" size="720,2" />
+	    <eLabel backgroundColor="metrixBackground" position="52,147" size="340,525" zPosition="-10" />
+	    <widget backgroundColor="metrixPreTrans2" font="SetrixHD; 130" foregroundColor="metrixPreTrans2" position="10,562" size="1273,296" source="Title" transparent="1" valign="top" zPosition="-20" />
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 32" position="462,63" render="Label" size="759,65" source="Title" transparent="1" />
+	    <widget name="waitingtext" position="0,0" size="0,0" />
+	    <eLabel backgroundColor="metrixBackground" position="417,51" size="810,621" zPosition="-10" />
+	    <!-- /*ClockWidget-->
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 60" halign="left" position="239,42" render="Label" size="169,80" source="global.CurrentTime" transparent="1" valign="top">
+	      <convert type="ClockToText">Default</convert>
+	    </widget>
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="78,83" render="Label" size="148,29" source="global.CurrentTime" transparent="1">
+	      <convert type="ClockToText">Format:%e. %b</convert>
+	    </widget>
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 20" foregroundColor="metrixAccent1" halign="right" position="101,58" render="Label" size="125,30" source="global.CurrentTime" transparent="1">
+	      <convert type="ClockToText">Format:%A</convert>
+	    </widget>
+	    <eLabel backgroundColor="metrixBackground" position="52,51" size="340,70" transparent="0" zPosition="-1" />
+	    <!--ClockWidget */-->
+	    <ePixmap alphatest="blend" pixmap="MetrixHD/menu/italymenu.png" position="93,145" size="256,256" transparent="1" zPosition="2" />
+	    <eLabel font="Regular; 20" foregroundColor="metrixAccent1" halign="center" position="56,329" render="Label" size="331,66" text="Support at\nwww.italysat.eu" transparent="1" zPosition="1" />
+	    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/green.png" position="610,637" size="30,35" />
+	    <ePixmap alphatest="blend" pixmap="MetrixHD/buttons/red.png" position="415,636" size="30,35" />
+	    <widget backgroundColor="metrixBackground" font="SetrixHD;20" halign="left" position="645,640" render="Label" size="160,24" source="key_green" transparent="1" zPosition="1" />
+	    <widget backgroundColor="metrixBackground" font="SetrixHD; 22" halign="left" position="450,640" render="Label" size="160,24" source="key_red" transparent="1" zPosition="1" />
+	    <widget enableWrapAround="1" font="Regular;22" itemHeight="28" name="lab1" position="470,135" scrollbarMode="showOnDemand" size="755,500" transparent="1" zPosition="3" />
+	  </screen>
+</skin>
